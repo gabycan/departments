@@ -18,7 +18,11 @@
         <td><%= apartment.building_id %></td>
         <td><%= link_to 'Show', apartment %></td>
         <td><%= link_to 'Edit', edit_apartment_path(apartment) %></td>
-        <td><%= link_to 'Destroy', apartment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <a href="" class="btn btn-danger">
+            <%= link_to 'Destroy', apartment, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </a>
+        </td>
       </tr>
     <% end %>
   </tbody>
