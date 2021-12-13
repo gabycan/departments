@@ -18,7 +18,14 @@
 
   <div class="field">
     <%= form.label :building_id, class: 'form-label' %>
-    <%= form.text_field :building_id %>
+    <%= form.select :building_id,
+      options_from_collection_for_select(p_buildings, :id, :name, apartment.building_id), { include_blank: "Select a Building" },
+      {class: "form-control"} %>
+      <% if apartment.errors[:building_id].any? %>
+        <div>
+          <%= apartment.errors[:building_id].first %>
+        </div>
+      <% end %>
   </div>
 
   <div class="actions">
