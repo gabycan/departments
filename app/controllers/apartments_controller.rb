@@ -12,12 +12,13 @@ class ApartmentsController < ApplicationController
 
   # GET /apartments/new
   def new
-    @apartment = Apartment.new
-    @buildings = Building.all
+    @apartment = Apartment.new                #select * from building
+    @buildings = Building.select(:id, :name)  #select id, name from buildings
   end
 
   # GET /apartments/1/edit
   def edit
+    @buildings = Building.select(:id, :name)
   end
 
   # POST /apartments or /apartments.json
@@ -29,6 +30,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: "Apartment was successfully created." }
         format.json { render :show, status: :created, location: @apartment }
       else
+        @buildings = Building.select(:id, :name)
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end
@@ -42,6 +44,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: "Apartment was successfully updated." }
         format.json { render :show, status: :ok, location: @apartment }
       else
+        @buildings = Building.select(:id, :name)
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end
@@ -61,6 +64,9 @@ class ApartmentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_apartment
       @apartment = Apartment.find(params[:id])
+    rescue
+      flash[:set_building_error] = "Could not find the record #{params[:id]}"
+      redirect_to building_path
     end
 
     # Only allow a list of trusted parameters through.

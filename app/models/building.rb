@@ -1,6 +1,7 @@
 class Building < ApplicationRecord
     has_many :apartments
 
-    validates :number,         presence: true, numericality: true
-    validates :building_id,    presence: true
+    validates :name,     presence: true
+    validates :address,  presence: true
+    validates :city,     presence: true
 end
