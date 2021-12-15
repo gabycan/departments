@@ -1,6 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Apartments</h1>
+<h1>
+  <i class="bi bi-door-open"></i>
+  Apartments
+</h1>
 
 <table>
   <thead>
@@ -15,7 +16,7 @@
     <% @apartments.each do |apartment| %>
       <tr>
         <td><%= apartment.number %></td>
-        <td><%= apartment.building_id %></td>
+        <td><%= apartment.building.name %></td>
         <td><%= link_to 'Show', apartment %></td>
         <td><%= link_to 'Edit', edit_apartment_path(apartment) %></td>
         <td>
