@@ -1,33 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+<nav class="navbar fixed-top navbar-light bg-light">
+  <div class="container">
     <div class="row">
-        <div class="col-2>
+        <div class="col-lg-1">
             <i class="bi bi-building"></i>
         </div>
-        <div class="col-4">
+        <div class="col-lg-3">
             PORTOCANO Bienes Raíces
         </div>
-        <div class="col-6">
-            #
+        <div class="col-lg-8">
+                <ul class="navbar mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item d-inline-block">
+                        <%= link_to "Home", "#_path", class:"nav-link active" %>
+                    </li>
+                    <li class="nav-item d-inline-block">
+                        <%= link_to "Buildings", buildings_path, class:"nav-link active" %>
+                    </li>
+                    <li class="nav-item d-inline-block">
+                        <%= link_to "Apartments", apartments_path, class:"nav-link active" %>
+                    </li>
+                </ul>
         </div>
     </div>
-    </a>
-    #<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    #  <span class="navbar-toggler-icon"></span>
-    #</button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            <%= link_to "Home", #_path, class="nav-link active" %>
-        </li>
-        <li class="nav-item">
-            <%= link_to "Buildings", buildings_path, class="nav-link active" %>
-        </li>
-        <li class="nav-item">
-            <%= link_to "Apartments", apartments_path, class="nav-link active" %>
-        </li>
-      </ul>
-    </div>
-  </div>
 </nav>

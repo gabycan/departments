@@ -1,4 +1,5 @@
 class ApartmentsController < ApplicationController
+  layout 'admin_layout'
   before_action :set_apartment, only: %i[ show edit update destroy ]
 
   # GET /apartments or /apartments.json

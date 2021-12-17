@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Store</title>
+    <title>Admin Buildings</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
   </head>
 
   <body>
-      <div class="row">
-        <div class="col-3">
+        <div class="row">
           <%= render "layouts/horizontal_menu" %>
         </div>
-        <div class="col-9">
-          <div class="container">
-              <%= yield %>
-          </div>
+        <div class="row mt-5 pt-5">
+            <%= yield %>       
         </div>
-    </div>
   </body>
 </html>
