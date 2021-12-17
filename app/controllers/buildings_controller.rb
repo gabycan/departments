@@ -54,6 +54,8 @@ class BuildingsController < ApplicationController
       format.html { redirect_to buildings_url, notice: "Building was successfully destroyed." }
       format.json { head :no_content }
     end
+  rescue
+    redirect_to buildings_path, notice: "Can´t destroy this building"
   end
 
   private
