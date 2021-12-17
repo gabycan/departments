@@ -1,5 +1,5 @@
 class Building < ApplicationRecord
-    has_many :apartments
+    has_many :apartments, dependent: :destroy
 
     validates :name,     presence: true
     validates :address,  presence: true
