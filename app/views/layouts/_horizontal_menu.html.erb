@@ -1,27 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-        <i class="bi bi-building"></i>
+    <div class="row">
+        <div class="col-2>
+            <i class="bi bi-building"></i>
+        </div>
+        <div class="col-4">
+            PORTOCANO Bienes Raíces
+        </div>
+        <div class="col-6">
+            #
+        </div>
+    </div>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    #<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    #  <span class="navbar-toggler-icon"></span>
+    #</button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <%= link_to "Home", #_path, class="nav-link active" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Buildings</a>
+            <%= link_to "Buildings", buildings_path, class="nav-link active" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Apartments</a>
+            <%= link_to "Apartments", apartments_path, class="nav-link active" %>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
