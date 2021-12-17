@@ -1,11 +1,11 @@
-<div class="container">
+<div class="px-4 py-5 my-5 text center">
+    <i class="bi bi-building"></i>
     <h1 class="jumbotron-heading">CAPOR Bienes Raíces</h1>
-    <p class="lead text-muted">
-        "ERP Gestión de Edificios de Apartamento"
-    </p>
-    <p>
-        <%= link_to "Buildings", buildings_path, class= "btn btn-secondary" %>
-        <%= link_to "Apartments", apartments_path, class= "btn btn-secondary" %>
-        #<a href="#" class="btn btn-primary my-2">Apartments</a>
-    </p>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">"ERP Gestión de Edificios de Apartamento"</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-secondary btn-lg px-4 gap-3"><%= link_to "Buildings", buildings_path, class= "btn btn-secondary" %>
+            <button type="button" class="btn btn-secondary btn-lg px-4"><%= link_to "Apartments", apartments_path, class= "btn btn-secondary" %>
+        </div>
+    </div>
 </div>
