@@ -1,6 +1,7 @@
 class Building < ApplicationRecord
     before_save :set_capitalize
     has_many :apartments
+    has_one_attached :picture
 
     validates :name,     presence: true
     validates :address,  presence: true

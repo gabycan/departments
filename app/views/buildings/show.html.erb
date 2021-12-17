@@ -20,6 +20,10 @@
   <%= @building.city %>
 </p>
 
+<% if @building.picture.attached? %>
+  <%= image_tag @building.picture, class: 'w-25' %>
+<% end %>
+
 <h4>Apartments</h4>
   <% @building.apartments.each do |a| %>
     <li>
