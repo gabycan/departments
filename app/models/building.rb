@@ -1,6 +1,6 @@
 class Building < ApplicationRecord
     before_save :set_capitalize
-    has_many :apartments, dependent: :destroy
+    has_many :apartments
 
     validates :name,     presence: true
     validates :address,  presence: true

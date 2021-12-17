@@ -55,7 +55,8 @@ class BuildingsController < ApplicationController
       format.json { head :no_content }
     end
   rescue
-    redirect_to buildings_path, notice: "Can´t destroy this building"
+    flash[:building_destroy_error] = "Can´t destroy #{@building.name} because it has apartments"
+    redirect_to buildings_path
   end
 
   private
