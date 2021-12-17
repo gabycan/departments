@@ -63,6 +63,9 @@ class BuildingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_building
       @building = Building.find(params[:id])
+    rescue
+      flash[:set_building_error] = "Could not find the record #{params[:id]}"
+      redirect_to buildings_path
     end
 
     # Only allow a list of trusted parameters through.
