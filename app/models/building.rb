@@ -4,8 +4,9 @@ class Building < ApplicationRecord
     has_one_attached :picture
 
     validates :name,     presence: true
+    validates :name, uniqueness: {scope: [:city, :address]}
     validates :address,  presence: true
-    validates :city,     presence: true
+    validates :city,     presence: true 
 
     private
     def set_capitalize    
