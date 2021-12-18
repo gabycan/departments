@@ -2,7 +2,13 @@
   <i class="bi bi-door-open"></i>
   New Apartment
 </h1>
-<div class="row">
-  <%= render 'form', apartment: @apartment, p_buildings: @buildings %>
+
+<div class="col-lg-1">
 </div>
-<%= link_to 'Back', apartments_path %>
+
+<div class="col-lg-11">
+  <div class="row">
+    <%= render 'form', apartment: @apartment, p_buildings: @buildings %>
+  </div>
+  <%= link_to 'Back', apartments_path, class: 'btn btn-warning text-white' %>
+</div>

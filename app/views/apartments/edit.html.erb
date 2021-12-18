@@ -3,11 +3,16 @@
   Editing Apartment
 </h1>
 
-<%= render 'form', apartment: @apartment, p_buildings: @buildings %>
-
-<div class="row">
-<div class="col-lg-2">
-  <%= link_to 'Show', @apartment, class: 'btn btn-primary text-white' %> |
-  <%= link_to 'Back', apartments_path, class: 'btn btn-primary text-white' %>
+<div class="col-lg-1">
 </div>
+
+<div class="col-lg-11">
+  <%= render 'form', apartment: @apartment, p_buildings: @buildings %>
+
+  <div class="row">
+    <div class="col-lg-2">
+      <%= link_to 'Show', @apartment, class: 'btn btn-warning text-white' %> |
+      <%= link_to 'Back', apartments_path, class: 'btn btn-warning text-white' %>
+    </div>
+  </div>
 </div>

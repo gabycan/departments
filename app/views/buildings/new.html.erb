@@ -3,6 +3,11 @@
     New Building
 </h1>
 
-<%= render 'form', building: @building %>
+<div class="col-lg-1">
+</div>
 
-<%= link_to 'Back', buildings_path %>
+<div class="col-lg-11">
+    <%= render 'form', building: @building %>
+
+    <%= link_to 'Back', buildings_path, class: 'btn btn-warning text-white' %>
+</div>
